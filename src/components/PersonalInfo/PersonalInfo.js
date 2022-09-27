@@ -18,12 +18,18 @@ const PersonalInfo = () => {
                     <label className={cl.radiolabel} for="not">Not detected</label>
                 </div>
 
+                <select className={cl.select}>
+                    <option value="">Select...</option>
+                    <option value="A">Option A</option>
+                    <option value="B">Option B</option>
+                </select>
+
                 <label className={cl.datelabel} for="birth">Date of birth:</label>
                 <input className={cl.input} name='birtday' id="birth" type="date"/>
                 
 
 
-                <button className={cl.button} type='submit'><NavLink end style={({isActive})=>({color:isActive?'#202082':'inherit'})} to="/">Change SighUp Information</NavLink></button>
+                <button className={cl.button} type='submit'><NavLink end style={({isActive})=>({color:isActive?'#202082':'inherit'})} to="/">Previous step</NavLink></button>
                 <button className={cl.button} type='submit'>Submit</button>
             </form>
        </div>
