@@ -1,0 +1,23 @@
+@import './src/components/style/variables.scss';
+
+.bread {
+    display:flex;
+    margin-top:150px;
+    color:black;
+    margin-left:60px;
+    margin-bottom:50px;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32px;
+    li {
+        margin: 0 8px;
+        a:hover {
+            color: $main-color;
+        }
+    }
+}

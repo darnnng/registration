@@ -1,0 +1,31 @@
+@import './src/components/style/variables.scss';
+
+.downfooter {
+      display: flex;
+      align-items: center;
+      height: 150px;
+      background-color: $dark;
+      color: $white;
+      width:1440px;
+      box-sizing: border-box;
+      position: fixed;
+      bottom:0;
+      padding-left: 60px;
+      padding-right: 60px;
+  }
+
+  .containerfooter {
+   
+    height: 120px;
+    box-sizing: border-box;
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    width:1380px;
+    
+  }
+
+  a:hover {
+        filter: invert(26%) sepia(95%) saturate(38%) hue-rotate(7deg) brightness(92%)
+    contrast(87%);
+  }

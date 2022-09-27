@@ -1,0 +1,38 @@
+@import './src/components/style/variables.scss';
+
+.header {
+  width:1440px;
+  position:fixed;
+  display:flex;
+  justify-content: center;
+  box-sizing: border-box;
+  background-color:$main-color;
+  color:$white;
+
+}
+
+.containerheader {
+    
+    height: 120px;
+    box-sizing: border-box;
+    display:flex;
+    align-items: center;
+    width:1380px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+
+.logo {
+
+    width:50px;
+    // padding-left: 40px;
+    background-size: contain;
+    background-repeat: no-repeat;  
+    transition: 0.5s;
+    &:hover {
+        filter: invert(26%) sepia(95%) saturate(38%) hue-rotate(7deg) brightness(92%)
+    contrast(87%);
+    }
+}
+
