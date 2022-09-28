@@ -1,22 +1,48 @@
 @import './src/components/style/variables.scss';
 
 .form {
+    padding-top:20px;
     margin-left:60px;
     display: flex;
     flex-direction: column;
-    input {
-        margin-bottom: 20px;
-        width:270px;
-        height:40px;
+    // input {
+    //     margin-bottom: 20px;
+    //     border: 1px black solid;
+    //     color:black;
+    //     font-size:16px;
+    //     border-radius: 3px;
+    // }
+}
+
+.input {
+    margin-left:60px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
         border: 1px black solid;
         color:black;
         font-size:16px;
         border-radius: 3px;
-    }
+        width:270px;
+        height:40px;
+
 }
 
+@media (max-width: 420px) { 
+    .form {
+        margin-left:calc(40px - 8%); }
+ }
+
+
+.error {
+    color:red;
+    font-size: 14px;
+    margin-left: 60px;
+} 
+
 .button {
-    width: 110px;
+    width: 105px;
+    height:37px;
     color: white;
     text-align: center;
     text-transform: uppercase;

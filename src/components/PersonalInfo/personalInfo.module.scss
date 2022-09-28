@@ -1,6 +1,7 @@
 @import './src/components/style/variables.scss';
 
 .form {
+    padding-top:20px;
     margin-left:60px;
     display: flex;
     flex-direction: column;
@@ -11,6 +12,24 @@
     //     font-size:16px;
     //     border-radius: 3px;
     // }
+}
+
+@media (max-width: 420px) { 
+    .form {
+        margin-left:calc(40px - 8%); }
+ }
+
+.select {
+    margin-left:60px;
+    margin-bottom: 20px;
+        border: 1px black solid;
+        color:black;
+        font-size:16px;
+        border-radius: 3px;
+        width:270px;
+        height:40px;
+        display: flex;
+       flex-direction: column;
 }
 
 .input {
@@ -25,6 +44,23 @@
         width:270px;
         height:40px;
 
+}
+
+.checkboxes {
+    margin-left:60px;
+    display: flex;
+    margin-bottom: 20px;
+        color:black;
+        font-size:16px;
+       
+}
+
+.checkbox {
+    margin-right: 5px;
+}
+
+.checkboxspan {
+    padding-right: 10px;
 }
 
 .radio {

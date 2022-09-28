@@ -1,13 +1,14 @@
 @import './src/components/style/variables.scss';
 
 .header {
-  width:1440px;
+  width:100%;
   position:fixed;
   display:flex;
   justify-content: center;
   box-sizing: border-box;
   background-color:$main-color;
   color:$white;
+  margin: 0;
 
 }
 
@@ -17,7 +18,7 @@
     box-sizing: border-box;
     display:flex;
     align-items: center;
-    width:1380px;
+    width:1440px;
     padding-left: 30px;
     padding-right: 30px;
   }
