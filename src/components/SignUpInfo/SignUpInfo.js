@@ -91,6 +91,12 @@ const SignUpInfo = () => {
         }
     },[phoneError,emailError,passwordError])
 
+    const checkClick=(e)=>{
+        if (formValid==false) {
+            e.preventDefault();
+        }
+    }
+
   
 
     return (
@@ -104,7 +110,7 @@ const SignUpInfo = () => {
                 {(passwordDirty&&passwordError) && <div className={cl.error}>Passwords don't match</div>}
                 <input onChange={e=>password2Handler(e)} className={cl.input} value={password2} name='password' type="password" placeholder="Repeat password"/>
                 <input default="disabled" form="form1" disabled ={!formValid} name="submit" className={cl.button} value="Submit" type='submit'/>
-                <button disabled={!formValid} className={cl.button}><NavLink  end style={({isActive})=>({color:isActive?'#202082':'inherit'})} to="/personal">Next step</NavLink></button>
+                <button default="disabled" disabled={!formValid} className={cl.button}><NavLink onClick={checkClick}  end style={({isActive})=>({color:isActive?'#202082':'inherit'})} to="/personal">Next step</NavLink></button>
             </form>
        </div>
        </div>
