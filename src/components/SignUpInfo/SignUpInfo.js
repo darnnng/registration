@@ -17,6 +17,8 @@ const SignUpInfo = () => {
     const [phoneError, setPhoneError]=useState(false);
     const [emailError, setEmailError]=useState(false);
     const [passwordDirty, setPasswordDirty]=useState(false);
+    const [phoneDirty, setPhoneDirty]=useState(false);
+    const [emailDirty, setEmailDirty]=useState(false);
     const [formValid, setFormValid]=useState(false);
 
     
@@ -24,6 +26,7 @@ const SignUpInfo = () => {
 
     const phoneHandler=(e)=>{
         setPhone(e.target.value)
+        setPhoneDirty(true)
         if (!!(e.target.value)!=schema['mobilePhone']['required']) { 
             setPhoneError(true);
         }
@@ -36,7 +39,8 @@ const SignUpInfo = () => {
     }
 
     const emailHandler=(e)=>{
-        setEmail(e.target.value)
+        setEmail(e.target.value);
+        setEmailDirty(true)
         
         if (!!(e.target.value)!=schema['email']['required']) { 
             setEmailError(true);
@@ -80,7 +84,7 @@ const SignUpInfo = () => {
     }
 
     useEffect(()=>{
-        if (phoneError || emailError || passwordError) {
+        if (!phoneDirty || phoneError || !emailDirty || emailError ||!passwordDirty || passwordError) {
             setFormValid(false)
         } else {
             setFormValid(true)
