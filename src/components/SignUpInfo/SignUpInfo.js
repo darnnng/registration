@@ -51,7 +51,6 @@ const SignUpInfo = () => {
     const passwordHandler=(e)=>{
         setPassword(e.target.value);
         setPasswordDirty(true);
-        console.log(e.target.value.length)
         if (e.target.value.length<Number(schema['password']['minLength']) || e.target.value.length>Number(schema['password']['maxLength']) ) {
             setPasswordError(false)
             setFormValid(false)
@@ -100,8 +99,8 @@ const SignUpInfo = () => {
                 <input onChange={e=>passwordHandler(e)} className={cl.input} value={password} name='password' type="password" placeholder="Password"/>
                 {(passwordDirty&&passwordError) && <div className={cl.error}>Passwords don't match</div>}
                 <input onChange={e=>password2Handler(e)} className={cl.input} value={password2} name='password' type="password" placeholder="Repeat password"/>
-                <input  form="form1" disabled ={!formValid} name="submit" className={cl.button} value="Submit" type='submit'/>
-                <button className={cl.button}><NavLink disabled={!formValid} end style={({isActive})=>({color:isActive?'#202082':'inherit'})} to="/personal">Next step</NavLink></button>
+                <input default="disabled" form="form1" disabled ={!formValid} name="submit" className={cl.button} value="Submit" type='submit'/>
+                <button disabled={!formValid} className={cl.button}><NavLink  end style={({isActive})=>({color:isActive?'#202082':'inherit'})} to="/personal">Next step</NavLink></button>
             </form>
        </div>
        </div>
